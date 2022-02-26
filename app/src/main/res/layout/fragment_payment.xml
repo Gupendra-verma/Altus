@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PaymentFragment">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/payment"
+        android:textAllCaps="true"
+        android:textColor="@color/brand_colour"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="610dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/payment"
+            app:layout_constraintBottom_toTopOf="@id/pay"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hdfc_card"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="25dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/atm_card_bkg"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/hdfc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/hdfc"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/visa"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/dot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/hdfc"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="...  ....  ...."
+                            android:textColor="@color/text1"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/hdfc"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_toEndOf="@id/dot"
+                            android:fontFamily="@font/roboto"
+                            android:text="7859"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/cardholder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="45dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/cardholder_name"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/ashok_sharma"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/expire_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="60dp"
+                            android:layout_marginBottom="45dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/expire_date"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="55dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="07/2028"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sbi_card"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hdfc_card"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/atm_card_bkg2"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/sbi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/sbi"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/visa"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/dot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sbi"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="...  ....  ...."
+                            android:textColor="@color/text1"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sbi"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_toEndOf="@id/dot"
+                            android:fontFamily="@font/roboto"
+                            android:text="7887"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/cardholder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="45dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/cardholder_name"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/ashok_sharma"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/expire_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="60dp"
+                            android:layout_marginBottom="45dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/expire_date"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="55dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="07/2028"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/icici_card"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sbi_card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/atm_card_bkg"
+                        android:layout_marginBottom="10dp"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/icici"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/icici"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/visa"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/dot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/icici"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="...  ....  ...."
+                            android:textColor="@color/text1"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/icici"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_toEndOf="@id/dot"
+                            android:fontFamily="@font/roboto"
+                            android:text="4787"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/cardholder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="45dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/cardholder_name"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/ashok_sharma"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/expire_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="60dp"
+                            android:layout_marginBottom="45dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/expire_date"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text1"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="55dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="07/2028"
+                            android:textColor="@color/text1"
+                            android:textSize="20sp" />
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAY   \u20B9 450.00"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

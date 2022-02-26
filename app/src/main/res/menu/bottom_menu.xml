@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/minersFragment"
+        android:title="@string/miners"
+        android:icon="@drawable/ic_tools"/>
+
+    <item
+        android:id="@+id/quickLendFragment"
+        android:title="@string/lend"
+        android:icon="@drawable/ic_metro_money"/>
+
+
+    <item
+        android:id="@+id/portfolioFragment"
+        android:title="@string/portfolio"
+        android:icon="@drawable/ic_pie_chart" />
+
+    <item
+        android:id="@+id/accountFragment"
+        android:title="@string/account"
+        android:icon="@drawable/ic_user"/>
+</menu>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/minersFragment">
+
+    <fragment
+        android:id="@+id/minersFragment"
+        android:name="com.example.altus.fragment.miners.MinersFragment"
+        android:label="fragment_miners"
+        tools:layout="@layout/fragment_miners" >
+        <action
+            android:id="@+id/action_minersFragment_to_bitcoinMinerFragment"
+            app:destination="@id/bitcoinMinerFragment" />
+        <action
+            android:id="@+id/action_minersFragment_to_ethereumMinerFragment"
+            app:destination="@id/ethereumMinerFragment" />
+        <action
+            android:id="@+id/action_minersFragment_to_minersPowerFragment"
+            app:destination="@id/minersPowerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/portfolioFragment"
+        android:name="com.example.altus.fragment.portfolio.PortfolioFragment"
+        android:label="PortfolioFragment" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.altus.fragment.account.AccountFragment"
+        android:label="AccountFragment" />
+    <fragment
+        android:id="@+id/bitcoinMinerFragment"
+        android:name="com.example.altus.fragment.BitcoinMinerFragment"
+        android:label="fragment_bitcoin_miner"
+        tools:layout="@layout/fragment_bitcoin_miner" >
+        <action
+            android:id="@+id/action_bitcoinMinerFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_bitcoinMinerFragment_to_withdrawBtcFragment"
+            app:destination="@id/withdrawBtcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ethereumMinerFragment"
+        android:name="com.example.altus.fragment.EthereumMinerFragment"
+        android:label="fragment_ethereum_miner"
+        tools:layout="@layout/fragment_ethereum_miner" >
+        <action
+            android:id="@+id/action_ethereumMinerFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_ethereumMinerFragment_to_withdrawEthFragment"
+            app:destination="@id/withdrawEthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/withdrawEthFragment"
+        android:name="com.example.altus.fragment.WithdrawBtFragment"
+        android:label="fragment_withdraw_eth"
+        tools:layout="@layout/fragment_withdraw_eth" />
+    <fragment
+        android:id="@+id/withdrawBtcFragment"
+        android:name="com.example.altus.fragment.WithdrawBtcFragment"
+        android:label="fragment_withdraw_btc"
+        tools:layout="@layout/fragment_withdraw_btc" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.altus.fragment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_bitcoinMinerFragment"
+            app:destination="@id/bitcoinMinerFragment" />
+        <action
+            android:id="@+id/action_paymentFragment_to_ethereumMinerFragment"
+            app:destination="@id/ethereumMinerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/minersPowerFragment"
+        android:name="com.example.altus.fragment.MinersPowerFragment"
+        android:label="fragment_miners_power"
+        tools:layout="@layout/fragment_miners_power" />
+    <fragment
+        android:id="@+id/quickLendFragment"
+        android:name="com.example.altus.fragment.quicklend.QuickLendFragment"
+        android:label="fragment_quick_lend" />
+</navigation>

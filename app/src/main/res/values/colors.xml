@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+<!--    project colours-->
+    <color name="brand_colour">#38B6FF</color>
+    <color name="text1">#3D3D3D</color>
+    <color name="text2">#7470E3</color>
+    <color name="crypto_bkg">#F8F8F8</color>
+    <color name="text_black">#242326</color>
+    <color name="red">#fb5237</color>
+    <color name="green">#13c319</color>
+    <color name="portfolio_value">#69A7CB</color>
+    <color name="text3">#AAAAAA</color>
+    <color name="grey_bkg">#F8F8F8</color>
+    <color name="text4">#979595</color>
+    <color name="text5">#767676</color>
+    <color name="border_blue">#BCE0FD</color>
+    <color name="atm_card1">#DBFAFF</color>
+    <color name="atm_card2">#F5E3F3</color>
+    <color name="level_bkg">#C5C7CC</color>
+</resources>

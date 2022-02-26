@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Altus</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_an_user">Already an user?</string>
+    <string name="log_in">Log In</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or_log_in_with">Or Log In With</string>
+    <string name="miners">Miners</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="account">Account</string>
+    <string name="miner_stats">Miner stats</string>
+    <string name="bitcoin">Bitcoin</string>
+    <string name="_1_05_btc">1.05 BTC</string>
+    <string name="ethereum">Ethereum</string>
+    <string name="ripple">Ripple</string>
+    <string name="litecoin">LiteCoin</string>
+    <string name="portfolio_value">Portfolio value</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="ashok_sharma">Ashok Sharma</string>
+    <string name="ashoksharma88_gmail_com">ashoksharma88@gmail.com</string>
+    <string name="phone_no">+91 8266179388</string>
+    <string name="notifications">Notifications</string>
+    <string name="general">General</string>
+    <string name="bank_details">Bank Details</string>
+    <string name="kyc">KYC</string>
+    <string name="help">Help</string>
+    <string name="_120_14">+120$ (14%)</string>
+    <string name="for_4_week">For 4 Week</string>
+    <string name="buy">Buy</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="total_withdrawable_amount">total withdrawable amount</string>
+    <string name="decline">Decline</string>
+    <string name="payment">Payment</string>
+    <string name="hdfc">HDFC</string>
+    <string name="cardholder_name">Cardholder name</string>
+    <string name="expire_date">Expire date</string>
+    <string name="sbi">sbi</string>
+    <string name="icici">icici</string>
+    <string name="lend">Lend</string>
+    <string name="quick_lend">Quick Lend</string>
+</resources>

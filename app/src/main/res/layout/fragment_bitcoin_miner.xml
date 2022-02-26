@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.BitcoinMinerFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/altus"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-50dp"
+                android:layout_marginTop="-90dp"
+                android:src="@drawable/altus"
+
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_message_circle"
+                app:layout_constraintBottom_toBottomOf="@+id/altus" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bitcoin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/profile_layout_bkg"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/bitcoin"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/bitcoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@id/img"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/bitcoin"
+                android:textColor="@color/text1"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bitcoin"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/img"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_120_14"
+                android:textColor="@color/green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/lato_bold"
+                android:text="Total mined 1.05 BTC"
+                android:textColor="@color/brand_colour"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp" />
+
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bitcoin_layout"
+            android:layout_marginTop="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
+                    android:layout_width="350dp"
+                    android:layout_height="130dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="4dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/miner2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/miner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp" />
+
+                        <TextView
+                            android:id="@+id/s2_19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_toEndOf="@id/miner2"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="S19 Pro"
+                            android:textColor="@color/text1"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/speed2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@id/miner2"
+                            android:layout_below="@id/s2_19"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="140 Gh/s"
+                            android:textColor="@color/text4"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/for_4_week"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/lato"
+                            android:textColor="@color/text1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/buy_btn1"
+                            android:layout_width="85dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toEndOf="@id/miner2"
+                            android:background="@drawable/buybtn_bkg"
+                            android:elevation="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/buy"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/withdraw_btn1"
+                            android:layout_width="110dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/withdrawl_btn_bkg"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@id/buy_btn1"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/withdraw"
+                                android:textAllCaps="true"
+                                android:textColor="@color/red"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card2"
+                    android:layout_width="350dp"
+                    android:layout_height="130dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card1"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="4dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/miner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/miner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp" />
+
+                        <TextView
+                            android:id="@+id/s_19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_toEndOf="@id/miner"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="S19 Pro"
+                            android:textColor="@color/text1"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/speed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@id/miner"
+                            android:layout_below="@id/s_19"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="140 Gh/s"
+                            android:textColor="@color/text4"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/for_4_week"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/lato"
+                            android:textColor="@color/text1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/buy_btn2"
+                            android:layout_width="85dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toEndOf="@id/miner"
+                            android:background="@drawable/buybtn_bkg"
+                            android:elevation="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/buy"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/withdraw_btn2"
+                            android:layout_width="110dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/withdrawl_btn_bkg"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@id/buy_btn2"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/withdraw"
+                                android:textAllCaps="true"
+                                android:textColor="@color/red"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card3"
+                    android:layout_width="350dp"
+                    android:layout_height="130dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card2"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="4dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/miner3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/miner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp" />
+
+                        <TextView
+                            android:id="@+id/s3_19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_toEndOf="@id/miner3"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="S19 Pro"
+                            android:textColor="@color/text1"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/speed3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@id/miner3"
+                            android:layout_below="@id/s3_19"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="140 Gh/s"
+                            android:textColor="@color/text4"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/for_4_week"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/lato"
+                            android:textColor="@color/text1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/buy_btn3"
+                            android:layout_width="85dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toEndOf="@id/miner3"
+                            android:background="@drawable/buybtn_bkg"
+                            android:elevation="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/buy"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/withdraw_btn3"
+                            android:layout_width="110dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/withdrawl_btn_bkg"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@id/buy_btn3"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/withdraw"
+                                android:textAllCaps="true"
+                                android:textColor="@color/red"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card4"
+                    android:layout_width="350dp"
+                    android:layout_height="130dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card3"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="4dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/miner4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/miner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp" />
+
+                        <TextView
+                            android:id="@+id/s4_19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_toEndOf="@id/miner4"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="S19 Pro"
+                            android:textColor="@color/text1"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/speed4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@id/miner4"
+                            android:layout_below="@id/s4_19"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="140 Gh/s"
+                            android:textColor="@color/text4"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/for_4_week"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/lato"
+                            android:textColor="@color/text1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/buy_btn4"
+                            android:layout_width="85dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toEndOf="@id/miner4"
+                            android:background="@drawable/buybtn_bkg"
+                            android:elevation="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/buy"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/withdraw_btn4"
+                            android:layout_width="110dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/withdrawl_btn_bkg"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@id/buy_btn4"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/withdraw"
+                                android:textAllCaps="true"
+                                android:textColor="@color/red"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card5"
+                    android:layout_width="350dp"
+                    android:layout_height="130dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="4dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/miner5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/miner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp" />
+
+                        <TextView
+                            android:id="@+id/s5_19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_toEndOf="@id/miner5"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="S19 Pro"
+                            android:textColor="@color/text1"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/speed5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@id/miner5"
+                            android:layout_below="@id/s5_19"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="140 Gh/s"
+                            android:textColor="@color/text4"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/for_4_week"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/lato"
+                            android:textColor="@color/text1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/buy_btn5"
+                            android:layout_width="85dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toEndOf="@id/miner5"
+                            android:background="@drawable/buybtn_bkg"
+                            android:elevation="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/buy"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/withdraw_btn5"
+                            android:layout_width="110dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/withdrawl_btn_bkg"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@id/buy_btn5"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="@string/withdraw"
+                                android:textAllCaps="true"
+                                android:textColor="@color/red"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragment.quicklend.QuickLendFragment">
+
+    <TextView
+        android:id="@+id/quick_lend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_lend"
+        android:textSize="24sp"
+        android:textColor="@color/brand_colour"
+        android:fontFamily="@font/lato_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/pattern"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:src="@drawable/pattern_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quick_lend"
+        android:layout_marginStart="-220dp"
+        android:layout_marginTop="50dp"/>
+
+    <RelativeLayout
+        android:id="@+id/lend_layout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/lend_bkg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quick_lend"
+        android:elevation="4dp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:src="@drawable/person"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/lend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/person"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/lend"
+            android:textColor="@color/text5"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/earn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lend"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/person"
+            android:fontFamily="@font/lato"
+            android:text="earn more than regular lending by lending out your crypto"
+            android:textColor="@color/text4"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/earn_more"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/person"
+            android:fontFamily="@font/lato_bold"
+            android:text="earn upto 6%, 12% or 15%"
+            android:textColor="@color/brand_colour"
+            android:textSize="16sp" />
+
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/amount_card"
+        android:layout_width="380dp"
+        android:layout_height="340dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lend_layout"
+        app:cardCornerRadius="40dp"
+        app:cardBackgroundColor="@color/white"
+        android:elevation="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="40dp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lending_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Enter lending Amount"
+                android:textColor="@color/brand_colour"
+                android:textSize="20sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/amount_input"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lending_amount"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/search_bkg"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/rupee_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_rupee" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/rupee_ic"
+                    android:background="@color/text4"
+
+                    />
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/line"
+                    android:fontFamily="@font/lato"
+                    android:hint="Enter lending amount..."
+                    android:includeFontPadding="true"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:textColor="@color/text4" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/calender_layout"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/amount_input"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/search_bkg"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/calender_check_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_calender_check" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/calender_check_ic"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Period"
+                    android:textColor="@color/text5"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="90 days"
+                    android:textColor="@color/brand_colour"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="14sp"
+                    android:layout_toStartOf="@id/arrow"
+                    android:layout_marginEnd="6dp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calender_layout"
+                android:layout_marginTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/checkbox"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="I accept the terms and condition"
+                    android:textColor="@color/text1"
+                    android:textSize="12sp"
+                    android:layout_marginStart="-5dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/withdraw_btn"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+               android:layout_centerInParent="true"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/continue_bkg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:padding="10dp"
+                    android:text="Continue"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/pattern_bottom"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:src="@drawable/pattern_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="-170dp"
+        android:layout_marginBottom="-120dp"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
